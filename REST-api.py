@@ -92,12 +92,12 @@ def api_hello_response():
 
     # Initializing a Response object. HTML mimetype by default.
     # Make_response() function is an alternative to manually initializing
+    # Flask.jsonify() is also an alternative which sets appropriate headers
     resp = Response(js, status=200, mimetype='application/json')
     # Adds a value to resp header for the key Link
     resp.headers['Link'] = 'http://vpetsev.com'
 
     return resp
-
 
 
 if __name__ == '__main__':
