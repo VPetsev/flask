@@ -1,4 +1,4 @@
-from flask import Flask, url_for, request, json
+from flask import Flask, url_for, request, json, Response, jsonify
 
 app = Flask(__name__)
 
@@ -77,11 +77,27 @@ def api_message():
         f.close()
         return "Binary message written!"
 
-    elif request.files:
-        return "File was received."
-
     else:
         return "415 Unsupported Media Type ;)"
+
+
+# Configuring a response with Flask's Response class
+@app.route('/helloResponse', methods=['GET'])
+def api_hello_response():
+    data = {
+        'hello': 'world',
+        'number': 3
+    }
+    js = json.dumps(data)
+
+    # Initializing a Response object. HTML mimetype by default.
+    # Make_response() function is an alternative to manually initializing
+    resp = Response(js, status=200, mimetype='application/json')
+    # Adds a value to resp header for the key Link
+    resp.headers['Link'] = 'http://vpetsev.com'
+
+    return resp
+
 
 
 if __name__ == '__main__':
