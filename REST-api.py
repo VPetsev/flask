@@ -18,7 +18,7 @@ def api_articles():
 # specified converters with <converter:name>
 
 # By default the route is a string - which accepts text without slashes
-# @app.route('/articles/<article_id>')
+# @app.route('/articles/<article_reid>')
 @app.route('/articles/<int:article_id>')
 @app.route('/articles/<float:article_id>')
 @app.route('/articles/<path:article_id>')
