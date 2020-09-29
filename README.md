@@ -1,11 +1,10 @@
 # Flask Projects and Modules 
 
-Collection of some flask modules and personal projects made with flask
+A collection of reusable flask modules for personal use and for test projects made with flask.
 
 
 ## Modules 
-* REST-api.py
-    *  Overview of creating a RESTful API with Flask and python. 
+* `REST-api.py` - Creating a RESTful API with Flask and python.
     *  Includes:
         * Routing
         * Converters
@@ -14,7 +13,7 @@ Collection of some flask modules and personal projects made with flask
         * Getting Data & Headers
         * Setting Headers through Responses
         
-* Flask Blockchain Implementation 
+* `/Flask-blockchain` 
     * Implementation of a blockchain with functionality
         *  `blockchain.py`
             * Blockchain proof-of-work implementation with hashing, nodes, mining, consensus and validations.
